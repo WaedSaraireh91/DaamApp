@@ -1,0 +1,248 @@
+"brand" = "Daam";
+"tagline" = "Small steps. Brighter futures.";
+"welcome" = "Welcome to Daam";
+"parent" = "Parent";
+"teacher" = "Teacher";
+"chooseRole" = "How can we help today?";
+"parentRole" = "Find the right tutor and book with confidence";
+"teacherRole" = "Share your knowledge. Make a difference.";
+"continueAction" = "Continue";
+"next" = "Next";
+"start" = "Get started";
+"login" = "Sign in";
+"email" = "Email address";
+"password" = "Password";
+"emailHint" = "name@example.com";
+"passwordHint" = "At least 8 characters";
+"demoEntry" = "Explore the demo";
+"demoNotice" = "Demo • No real payments or bookings";
+"onboardTitle1" = "The right teacher makes a difference";
+"onboardBody1" = "Personal learning for your child, with tutors nearby.";
+"onboardTitle2" = "Your time. Your place. A fresh start.";
+"onboardBody2" = "Book with no booking fee. Pay for the lesson in cash when your teacher arrives.";
+"home" = "Home";
+"bookings" = "My lessons";
+"favorites" = "Saved";
+"account" = "Account";
+"search" = "Find a teacher";
+"searchHint" = "Teacher name or subject";
+"parentGreeting" = "Help your child flourish";
+"parentSubtitle" = "Personal lessons. More attention. More confidence.";
+"featured" = "Meet your next teacher";
+"seeAll" = "See all";
+"noBookingFee" = "No booking fee";
+"cashPolicy" = "Pay the lesson price to your teacher in cash on arrival. No upfront payment and no booking fee.";
+"all" = "All";
+"online" = "Online";
+"inPerson" = "In person";
+"math" = "Mathematics";
+"english" = "English";
+"science" = "Science";
+"amman" = "Amman";
+"results" = "Teachers";
+"teachersCount" = "%d teachers available";
+"perHour" = "%@ / hour";
+"money" = "JOD %d";
+"teacherBio" = "Clear explanations, a plan tailored to your child, and thoughtful follow-up after every lesson.";
+"about" = "About your teacher";
+"experience" = "Teaching experience • Individual learning plan";
+"bookLesson" = "Book a lesson";
+"save" = "Save";
+"saved" = "Saved";
+"bookingDetails" = "Lesson details";
+"studentName" = "Student name";
+"studentHint" = "Enter student name";
+"grade" = "School grade";
+"gradeFormat" = "Grade %d";
+"dateTime" = "Date & time";
+"date" = "Lesson date";
+"time" = "Lesson time";
+"duration" = "Duration";
+"oneHour" = "One hour";
+"location" = "Lesson location";
+"city" = "City";
+"address" = "Full address";
+"addressHint" = "Area, street, building number";
+"notes" = "Notes for your teacher";
+"notesHint" = "Tell us what your child needs";
+"review" = "Review booking";
+"confirmBooking" = "Send booking request";
+"lessonPrice" = "Lesson price · cash";
+"bookingFee" = "Booking fee";
+"dueNow" = "Due now";
+"successTitle" = "A lovely step toward learning!";
+"successBody" = "Your request has been sent. Your lesson is confirmed once the teacher accepts.";
+"viewBookings" = "View my lessons";
+"pending" = "Awaiting acceptance";
+"accepted" = "Confirmed";
+"declined" = "Declined";
+"emptyBookings" = "Your learning journey starts here";
+"emptyBookingsBody" = "Choose a teacher and book your child’s first lesson.";
+"emptyFavorites" = "Your favorite teachers, together";
+"emptyFavoritesBody" = "Tap the heart on a teacher’s profile to save them.";
+"teacherDashboard" = "Teacher dashboard";
+"teacherGreeting" = "Your knowledge shapes a future";
+"teacherSubtitle" = "Your lessons and students, all in one place.";
+"requests" = "Lesson requests";
+"schedule" = "My schedule";
+"students" = "My students";
+"newRequests" = "New requests";
+"confirmedLessons" = "Confirmed lessons";
+"feeTotal" = "Acceptance fees";
+"firstFreeTitle" = "Your first acceptance is on us";
+"firstFreeBody" = "Your first accepted lesson is free. After that, JOD 1 for each lesson you accept.";
+"nextFee" = "Next acceptance fee";
+"requestDetails" = "Request details";
+"acceptLesson" = "Accept lesson";
+"declineLesson" = "Decline request";
+"confirmAccept" = "Confirm acceptance";
+"acceptFree" = "This is your first accepted lesson — no fee.";
+"acceptPaid" = "This acceptance requires JOD 1 by CliQ before acceptance. Collect the lesson price in cash on arrival.";
+"feeRecorded" = "Lesson confirmed and acceptance fee recorded in the demo. No money was charged.";
+"cancel" = "Cancel";
+"done" = "Done";
+"emptyRequests" = "No new requests";
+"emptyRequestsBody" = "New requests from parents will appear here.";
+"emptySchedule" = "Your schedule awaits its first lesson";
+"emptyScheduleBody" = "Accept a request to add it to your schedule.";
+"emptyStudents" = "Your teaching journey starts here";
+"emptyStudentsBody" = "Students from confirmed lessons will appear here.";
+"profile" = "Profile";
+"language" = "Language";
+"arabic" = "Arabic";
+"englishLanguage" = "English";
+"switchRole" = "Switch account role";
+"localData" = "Demo data is saved locally on this device.";
+"errorTitle" = "Could not complete the action";
+"retry" = "Try again";
+"invalidBooking" = "Enter the student name, a full address, and a future time.";
+"alreadyHandled" = "This request has already been handled.";
+"storageError" = "Could not save the change on this device. Please try again.";
+"timeUnavailable" = "This teacher is booked at that time. Choose another time.";
+"emptySearch" = "No matching teachers";
+"emptySearchBody" = "Try another name or subject.";
+"availabilityNote" = "Demo availability • Confirmed after teacher acceptance";
+"cashBadge" = "Cash on arrival";
+"lesson" = "Lesson";
+"free" = "Free";
+"teacherNameAhmad" = "Ahmad Al Abdullah";
+"teacherNameSarah" = "Sarah Al Qaisi";
+"teacherNameMohammad" = "Mohammad Bani Hani";
+"stepDetails" = "1 Details";
+"stepTime" = "2 Time & place";
+"stepReview" = "3 Review";
+"declineConfirmation" = "Decline this request? Declining has no fee.";
+"bookingReference" = "Booking reference";
+"acceptedCount" = "Accepted lessons";
+"feeLedger" = "Acceptance fee history";
+"noFeesYet" = "No fees recorded yet";
+
+"teacherLocation" = "Teacher area";
+"studentLocation" = "Student lesson address";
+"jubeiha" = "Al Jubeiha";
+"khalda" = "Khalda";
+"shmeisani" = "Shmeisani";
+"splashMessage" = "By your side, every step of learning.";
+"rateSetupTitle" = "Set your lesson rate";
+"rateSetupBody" = "Parents will see your hourly rate before booking.";
+"hourlyRate" = "Hourly rate in Jordanian dinars";
+"rateHint" = "For example: 15";
+"saveRate" = "Save hourly rate";
+"invalidRate" = "Enter a whole-number rate between JOD 1 and JOD 500.";
+"cliqTitle" = "Acceptance fee via CliQ";
+"cliqBody" = "Transfer JOD 1 by CliQ to the specified account, then submit the transfer reference. The lesson cannot be accepted until payment is verified.";
+"cliqRecipient" = "Recipient";
+"cliqAlias" = "Account / alias";
+"cliqNotConfigured" = "The CliQ account will appear once recipient details are supplied. Do not send money yet.";
+"transferReference" = "Transfer reference";
+"referenceHint" = "Enter the reference from your banking app";
+"submitTransfer" = "Submit transfer details";
+"awaitingVerification" = "Awaiting transfer verification";
+"verificationBody" = "Submitting a reference does not confirm receipt. You can accept the lesson after the transfer is verified.";
+"paymentRequired" = "The acceptance-fee transfer must be verified first.";
+"paymentVerified" = "Transfer verified";
+"demoNoTransfers" = "UI demo only. Do not send real money through this version.";
+"ownerReview" = "Transfer review — app owner";
+"ownerDemo" = "Demo owner tools. This permission must be protected by the server when APIs are connected.";
+"approveTransfer" = "Confirm receipt of JOD 1";
+"approveTransferMessage" = "Confirm only after checking receipt in the CliQ account. The teacher will then be allowed to accept the lesson.";
+"rejectTransfer" = "Reject transfer details";
+"transferRejected" = "Transfer not approved";
+"transferRejectedBody" = "Check the reference and transfer details, then resubmit. Do not send another payment before checking with the owner.";
+"noTransfers" = "No transfers awaiting review";
+"duplicateReference" = "This transfer reference has already been used.";
+"bookingDetailsIntro" = "Let’s plan a lesson around your child.";
+"scheduleIntro" = "Choose a time and tell us where to meet.";
+"reviewIntro" = "Check the details before sending your request.";
+"quickActions" = "At a glance";
+"studentDetails" = "About the student";
+"yourLesson" = "Your next lesson";
+"paymentSummary" = "Payment summary";
+
+"registrationTitle" = "Complete your profile";
+
+"experienceBrief" = "Teaching experience";
+
+"experienceHint" = "Write 20–1,000 characters about your experience and teaching approach. This appears to parents.";
+
+"teachingAreas" = "Where can you teach?";
+
+"studentArea" = "Student’s area";
+
+"areaMatchingNote" = "Matches use the selected area, not GPS distance. Amman includes its listed neighborhoods; other choices cover the governorate. Only students who request your lessons appear.";
+
+"privateCertificate" = "Private qualification document";
+
+"certificateNotice" = "Attach a qualification or supporting eligibility document (PDF, JPG or PNG, up to 10 MB). For private records only; never shown to parents or students. This demo saves it on this device. Uploading does not verify eligibility.";
+
+"certificateStored" = "Document saved locally • not verified";
+
+"chooseCertificate" = "Choose / replace document";
+
+"certificateError" = "Choose a readable PDF, JPG or PNG file smaller than 10 MB. The document could not be saved.";
+
+"declarationTitle" = "Declaration and consent";
+
+"acceptDeclaration" = "I have read and accept this declaration";
+
+"teacherDeclaration" = "I declare that I am legally eligible to provide private tutoring in Jordan and hold any qualifications, permissions and work permits applicable to me. My information and documents are accurate. I am responsible for maintaining eligibility and will stop accepting lessons if it changes. I authorize Daam to retain my supporting document privately for eligibility records. Daam facilitates bookings; I remain responsible for my eligibility and any false statements, to the extent permitted by law. This declaration does not exclude obligations or liability that cannot legally be excluded.";
+
+"parentDeclaration" = "I confirm that I am at least 18 years old and am the parent or legal guardian authorized to manage this account and book lessons for the child. I control this account and am responsible for the information I provide. I authorize Daam to use the necessary student and location details to arrange lessons and share them with the chosen teacher. I will not allow a child to book or share personal information independently through this account.";
+
+"registrationRequired" = "Complete the required profile information and accept the declaration to continue.";
+
+"nearbyTeachers" = "Teachers in your area";
+
+"nearbyOnly" = "My area only";
+
+"noAreaMatches" = "No teachers in this area yet. Search all areas or update your area in Account.";
+
+"area_jubeiha" = "Amman · Jubeiha";
+
+"area_khalda" = "Amman · Khalda";
+
+"area_shmeisani" = "Amman · Shmeisani";
+
+"area_amman" = "Amman (all areas)";
+
+"area_irbid" = "Irbid";
+
+"area_zarqa" = "Zarqa";
+
+"area_balqa" = "Balqa";
+
+"area_madaba" = "Madaba";
+
+"area_jerash" = "Jerash";
+
+"area_ajloun" = "Ajloun";
+
+"area_mafraq" = "Mafraq";
+
+"area_karak" = "Karak";
+
+"area_tafilah" = "Tafilah";
+
+"area_maan" = "Ma’an";
+
+"area_aqaba" = "Aqaba";
