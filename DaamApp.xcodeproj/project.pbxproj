@@ -33,28 +33,28 @@
 
 /* Begin PBXFileReference section */
 		02209A7D0367F2EBF8EBF30B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		09F48BF4FD17366E3299380B /* SplashView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SplashView.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		09F48BF4FD17366E3299380B /* SplashView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		0B1CD56D6119EB4DD7834C92 /* DaamApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DaamApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		2069A01AE081A96E9616CC6A /* ParentViews.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParentViews.swift; path = ParentViews.swift; sourceTree = "<group>"; };
-		24453A57EE3D7421838E9665 /* DaamApp.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DaamApp.swift; path = DaamApp.swift; sourceTree = "<group>"; };
-		561D183A5A93C01EB3AB79C6 /* Components.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Components.swift; path = Components.swift; sourceTree = "<group>"; };
-		5971DA63B175AA155980CE15 /* MockTutoringRepository.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MockTutoringRepository.swift; path = MockTutoringRepository.swift; sourceTree = "<group>"; };
-		670A8F95D470CEA7054B64BA /* TeacherSetupView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TeacherSetupView.swift; path = TeacherSetupView.swift; sourceTree = "<group>"; };
-		6F172EB0D0552E79476548CF /* BookingFlow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BookingFlow.swift; path = BookingFlow.swift; sourceTree = "<group>"; };
-		707954C77A8C04A935804C96 /* Models.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Models.swift; path = Models.swift; sourceTree = "<group>"; };
-		75030B33ADDC97494E66D204 /* DashboardView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DashboardView.swift; path = DashboardView.swift; sourceTree = "<group>"; };
-		826DCBAE7C21DC01C97966BD /* OwnerPaymentsView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OwnerPaymentsView.swift; path = OwnerPaymentsView.swift; sourceTree = "<group>"; };
-		92B41940EC7FD9DDB04FDB19 /* AppModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AppModel.swift; path = AppModel.swift; sourceTree = "<group>"; };
-		9CDA6FD257C15D20F723501F /* LocalLessonRepository.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LocalLessonRepository.swift; path = LocalLessonRepository.swift; sourceTree = "<group>"; };
-		B0FC6862A2CF377955238208 /* LocalizedTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LocalizedTextField.swift; path = LocalizedTextField.swift; sourceTree = "<group>"; };
+		2069A01AE081A96E9616CC6A /* ParentViews.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ParentViews.swift; sourceTree = "<group>"; };
+		24453A57EE3D7421838E9665 /* DaamApp.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DaamApp.swift; sourceTree = "<group>"; };
+		561D183A5A93C01EB3AB79C6 /* Components.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Components.swift; sourceTree = "<group>"; };
+		5971DA63B175AA155980CE15 /* MockTutoringRepository.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MockTutoringRepository.swift; sourceTree = "<group>"; };
+		670A8F95D470CEA7054B64BA /* TeacherSetupView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TeacherSetupView.swift; sourceTree = "<group>"; };
+		6F172EB0D0552E79476548CF /* BookingFlow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BookingFlow.swift; sourceTree = "<group>"; };
+		707954C77A8C04A935804C96 /* Models.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		75030B33ADDC97494E66D204 /* DashboardView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		826DCBAE7C21DC01C97966BD /* OwnerPaymentsView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OwnerPaymentsView.swift; sourceTree = "<group>"; };
+		92B41940EC7FD9DDB04FDB19 /* AppModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
+		9CDA6FD257C15D20F723501F /* LocalLessonRepository.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LocalLessonRepository.swift; sourceTree = "<group>"; };
+		B0FC6862A2CF377955238208 /* LocalizedTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LocalizedTextField.swift; sourceTree = "<group>"; };
 		BA9B63E12FDBC3268DCECDCC /* ar */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
-		C2A0881234C8B588096F67D9 /* SearchResultsView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SearchResultsView.swift; path = SearchResultsView.swift; sourceTree = "<group>"; };
-		CB8EE4CBC401219E04B96032 /* ViewModels.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ViewModels.swift; path = ViewModels.swift; sourceTree = "<group>"; };
-		CBC951C6E894B71BB96D6BD1 /* Assets.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Assets.xcassets; sourceTree = "<group>"; };
-		D95EF3467141B25704E0AABF /* DaamTheme.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DaamTheme.swift; path = DaamTheme.swift; sourceTree = "<group>"; };
-		DF5FCB28844FEB02E16918C9 /* Lesson.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Lesson.swift; path = Lesson.swift; sourceTree = "<group>"; };
-		E1194D71A72E26B979399480 /* L10n.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = L10n.swift; path = L10n.swift; sourceTree = "<group>"; };
-		EA18C62D9F6055AE4DCC7492 /* AuthenticationViews.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AuthenticationViews.swift; path = AuthenticationViews.swift; sourceTree = "<group>"; };
+		C2A0881234C8B588096F67D9 /* SearchResultsView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SearchResultsView.swift; sourceTree = "<group>"; };
+		CB8EE4CBC401219E04B96032 /* ViewModels.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ViewModels.swift; sourceTree = "<group>"; };
+		CBC951C6E894B71BB96D6BD1 /* Assets.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D95EF3467141B25704E0AABF /* DaamTheme.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DaamTheme.swift; sourceTree = "<group>"; };
+		DF5FCB28844FEB02E16918C9 /* Lesson.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Lesson.swift; sourceTree = "<group>"; };
+		E1194D71A72E26B979399480 /* L10n.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = L10n.swift; sourceTree = "<group>"; };
+		EA18C62D9F6055AE4DCC7492 /* AuthenticationViews.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AuthenticationViews.swift; sourceTree = "<group>"; };
 		F8ABDA79F7CD26255366B965 /* en */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -76,7 +76,6 @@
 				CBC951C6E894B71BB96D6BD1 /* Assets.xcassets */,
 				CDDF6CDEDCE17BB839ED20E4 /* Localizable.strings */,
 			);
-			name = Resources;
 			path = Resources;
 			sourceTree = "<group>";
 		};
@@ -86,7 +85,6 @@
 				707954C77A8C04A935804C96 /* Models.swift */,
 				DF5FCB28844FEB02E16918C9 /* Lesson.swift */,
 			);
-			name = Domain;
 			path = Domain;
 			sourceTree = "<group>";
 		};
@@ -104,7 +102,6 @@
 				5971DA63B175AA155980CE15 /* MockTutoringRepository.swift */,
 				9CDA6FD257C15D20F723501F /* LocalLessonRepository.swift */,
 			);
-			name = Data;
 			path = Data;
 			sourceTree = "<group>";
 		};
@@ -113,7 +110,6 @@
 			children = (
 				24453A57EE3D7421838E9665 /* DaamApp.swift */,
 			);
-			name = App;
 			path = App;
 			sourceTree = "<group>";
 		};
@@ -131,7 +127,6 @@
 			children = (
 				E1194D71A72E26B979399480 /* L10n.swift */,
 			);
-			name = Localization;
 			path = Localization;
 			sourceTree = "<group>";
 		};
@@ -162,7 +157,6 @@
 				168374E3E24CDDA885363537 /* Resources */,
 				70C8512F7C617B1DF6E7A8FF /* Localization */,
 			);
-			name = DaamApp;
 			path = DaamApp;
 			sourceTree = "<group>";
 		};
@@ -180,7 +174,6 @@
 				670A8F95D470CEA7054B64BA /* TeacherSetupView.swift */,
 				826DCBAE7C21DC01C97966BD /* OwnerPaymentsView.swift */,
 			);
-			name = Presentation;
 			path = Presentation;
 			sourceTree = "<group>";
 		};
@@ -191,7 +184,6 @@
 				561D183A5A93C01EB3AB79C6 /* Components.swift */,
 				B0FC6862A2CF377955238208 /* LocalizedTextField.swift */,
 			);
-			name = DesignSystem;
 			path = DesignSystem;
 			sourceTree = "<group>";
 		};
@@ -223,6 +215,12 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1600;
 				LastUpgradeCheck = 2700;
+				TargetAttributes = {
+					65092B35652EFDB64DDD3CEE = {
+						DevelopmentTeam = R8KX5PZ67H;
+						ProvisioningStyle = Automatic;
+					};
+				};
 			};
 			buildConfigurationList = 54D85C004BF4CA5D08E72EF1 /* Build configuration list for PBXProject "DaamApp" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -234,8 +232,6 @@
 				Base,
 			);
 			mainGroup = 68CA558EFD24B34AE33E99A5;
-			minimizedProjectReferenceProxies = 0;
-			preferredProjectObjectVersion = 77;
 			productRefGroup = 42612637B7A63D04AE0CDE65 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -307,6 +303,7 @@
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = R8KX5PZ67H;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "دعم";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -333,6 +330,7 @@
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = R8KX5PZ67H;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "دعم";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -461,8 +459,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
