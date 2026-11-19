@@ -8,6 +8,19 @@ enum AppLanguage: String, CaseIterable, Identifiable {
 
 /// Typed keys are the only entry point for user-facing copy.
 enum L10n: String, CaseIterable {
+    case browseTeachers, registerOrLogin, findYourTeacher, learningStartsHere, discoveryHeadline, discoverySubtitle, localTeachers, flexibleTimes, directoryUnavailable, directoryEmptyBody, joinDaam, teachersComingSoon, howDaamWorks, chooseYourTeacher, chooseYourTime, learnAndPayCash, browseFreely, reviewedTeacher, viewTeacher, welcomeBack, authNewSubtitle, loginMethod, localPhoneTitle, localPhoneBody, localCodeLabel, codeExpiry, changePhone, sendPhoneCode, verifyAndContinue, invalidPhone, invalidPhoneCode, phoneCooldown, phoneRegistrationRequired, phoneAlreadyRegistered, phoneVerificationCode, resendPhoneCode, invalidPersonName
+    case approveTeacher, replyTitle, loadMore
+    case firstName, lastName, phoneNumber, forgotPasswordTitle, resetPasswordTitle, sendResetLink, resetEmailSent, passwordResetDone, emailVerifiedDone, linkExpired, emailAlreadyUsed, checkDetails, backendConfigurationRequired, subjectsTitle, teacherReviewPending, addAvailability, completeLesson, completed, cancelled, supportTitle, supportMessage, sendMessage, supportPending
+    case notifications, noNotifications, notificationNewRequest, notificationRequestPending, notificationLessonAccepted, notificationLessonDeclined, notificationLessonCancelled, notificationLessonCompleted, notificationTransferWaiting, notificationTransferVerified, notificationTransferRejected
+    case selectOnMap, tapMapToChoose, findingAddress, confirmLocation, openDirections, payAcceptanceFee
+    case latestLesson, noUpcomingLessons
+    case teacherPhoto, teacherPhotoHint, addTeacherPhoto, changeTeacherPhoto, profilePhotoError
+    case forceUpdateTitle, forceUpdateBody, updateNow, checkAgain
+    case messages, inbox, newMessage, sent, supportIntro, messageText, messageSent
+    case noInboxMessages, noSentMessages, supportRecipient, supportAnswered
+    case authNameRequired, authEmailRequired, authPasswordRequired, authPasswordMismatch, authEmailResent
+    case authWelcome, authPhaseNotice, signOut, verifyEmail, verificationInstructions, verificationCode
+    case fullName, confirmPassword, passwordRule, resendCode, backToLogin, authTryAgain, authThrottled, authRejected
     case registrationTitle
     case experienceBrief
     case experienceHint
@@ -20,6 +33,9 @@ enum L10n: String, CaseIterable {
     case chooseCertificate
     case certificateError
     case declarationTitle
+    case termsTitle
+    case agreeContinue
+    case dismissAction
     case acceptDeclaration
     case teacherDeclaration
     case parentDeclaration
@@ -43,7 +59,7 @@ enum L10n: String, CaseIterable {
     case area_maan
     case area_aqaba
 
-    case splashMessage
+    case splashMessage, skipIntro
     case rateSetupTitle
     case rateSetupBody
     case hourlyRate
@@ -91,6 +107,7 @@ enum L10n: String, CaseIterable {
     case next
     case start
     case login
+    case createAccount
     case email
     case password
     case emailHint

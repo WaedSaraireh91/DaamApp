@@ -80,6 +80,9 @@ struct RegistrationView: View {
     @State private var certificate = ""
     @State private var accepted = false
     @State private var importing = false
+    @State private var showDisclaimer = false
+    @AppStorage("daam.disclaimer.parent.v1") private var parentDisclaimerShown = false
+    @AppStorage("daam.disclaimer.teacher.v1") private var teacherDisclaimerShown = false
     private var canContinue: Bool {
         accepted && (!isTeacher || ((20...1000).contains(bio.trimmingCharacters(in: .whitespacesAndNewlines).count) && !areas.isEmpty && !certificate.isEmpty))
     }
@@ -102,12 +105,12 @@ struct RegistrationView: View {
                         Toggle(app.text(area.key), isOn: Binding(get: { areas.contains(area) }, set: { if $0 { areas.insert(area) } else { areas.remove(area) } }))
                     }
                 }
-                DashboardPanel {
-                    Label(app.text(.privateCertificate), systemImage: "lock.doc").font(.headline)
-                    Text(app.text(.certificateNotice)).font(.footnote).foregroundStyle(DaamTheme.secondary)
-                    if !certificate.isEmpty { Label(app.text(.certificateStored), systemImage: "doc.badge.checkmark") }
-                    Button(app.text(.chooseCertificate)) { importing = true }.buttonStyle(DaamButtonStyle(outlined: true))
-                }
+//                DashboardPanel {
+//                    Label(app.text(.privateCertificate), systemImage: "lock.doc").font(.headline)
+//                    Text(app.text(.certificateNotice)).font(.footnote).foregroundStyle(DaamTheme.secondary)
+//                    if !certificate.isEmpty { Label(app.text(.certificateStored), systemImage: "doc.badge.checkmark") }
+//                    Button(app.text(.chooseCertificate)) { importing = true }.buttonStyle(DaamButtonStyle(outlined: true))
+//                }
             } else {
                 Picker(app.text(.studentArea), selection: $parentArea) {
                     ForEach(JordanArea.allCases) { Text(app.text($0.key)).tag($0) }
@@ -123,7 +126,10 @@ struct RegistrationView: View {
                 let saved = isTeacher
                     ? app.saveTeacherRegistration(bio: bio, areas: areas, certificate: certificate, accepted: accepted)
                     : app.saveParentRegistration(area: parentArea, accepted: accepted)
-                if saved { dismiss() }
+                if saved {
+                    if isTeacher ? !teacherDisclaimerShown : !parentDisclaimerShown { showDisclaimer = true }
+                    else { dismiss() }
+                }
             }.buttonStyle(DaamButtonStyle()).disabled(!canContinue)
         }
         .onAppear {
@@ -154,5 +160,47 @@ struct RegistrationView: View {
                 certificate = name
             } catch { app.error = .certificateError }
         }
+        .sheet(isPresented: $showDisclaimer) {
+            RegistrationDisclaimerView(isTeacher: isTeacher) {
+                if isTeacher { teacherDisclaimerShown = true } else { parentDisclaimerShown = true }
+                showDisclaimer = false
+                dismiss()
+            } onDismiss: {
+                showDisclaimer = false
+                dismiss()
+            }
+            .environmentObject(app)
+            .environment(\.layoutDirection, app.language == .arabic ? .rightToLeft : .leftToRight)
+            .environment(\.locale, app.language.locale)
+        }
+    }
+}
+
+struct RegistrationDisclaimerView: View {
+    let isTeacher: Bool
+    let onAgree: () -> Void
+    let onDismiss: () -> Void
+    @EnvironmentObject private var app: AppModel
+    @State private var checked = false
+    var body: some View {
+        VStack(spacing: 0) {
+            Capsule().fill(Color.secondary.opacity(0.18)).frame(width: 52, height: 6).padding(.top, 12)
+            VStack(spacing: 10) {
+                Image(systemName: "checkmark.shield.fill").font(.system(size: 28)).foregroundStyle(DaamTheme.primary)
+                Text(app.text(.declarationTitle)).font(.title2.bold())
+                Text(app.text(isTeacher ? .teacher : .parent)).font(.subheadline).foregroundStyle(DaamTheme.secondary)
+            }.frame(maxWidth: .infinity).padding(.vertical, 20)
+            Divider()
+            ScrollView {
+                VStack(alignment: .leading, spacing: 14) {
+                    Text(app.text(.termsTitle)).font(.headline)
+                    Text(app.text(isTeacher ? .teacherDeclaration : .parentDeclaration)).foregroundStyle(DaamTheme.secondary).lineSpacing(5)
+                }.frame(maxWidth: .infinity, alignment: .leading).padding(20)
+            }.frame(maxHeight: 300)
+            Divider()
+            Toggle(isOn: $checked) { Text(app.text(.acceptDeclaration)).font(.subheadline) }.padding(.horizontal, 20).padding(.vertical, 14)
+            Button(app.text(.agreeContinue)) { onAgree() }.buttonStyle(DaamButtonStyle()).disabled(!checked).padding(.horizontal, 20)
+            Button(app.text(.dismissAction), action: onDismiss).buttonStyle(DaamButtonStyle(outlined: true)).padding(20)
+        }.presentationDetents([.large]).presentationDragIndicator(.hidden)
     }
 }

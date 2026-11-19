@@ -44,6 +44,6 @@ struct LoadDashboard: Sendable {
 enum CredentialsValidator {
     static func isValid(email: String, password: String) -> Bool {
         let parts = email.trimmingCharacters(in: .whitespacesAndNewlines).split(separator: "@")
-        return parts.count == 2 && parts[1].contains(".") && !email.contains(" ") && password.count >= 8
+        return parts.count == 2 && parts[1].contains(".") && !email.contains(" ") && password.count >= 6
     }
 }

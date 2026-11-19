@@ -21,6 +21,7 @@ struct OnboardingFlow: View {
 
 struct LoginView: View {
     let continueAction: () -> Void
+    let registerAction: () -> Void
     @State private var email = ""
     @State private var password = ""
     @EnvironmentObject private var app: AppModel
@@ -36,6 +37,9 @@ struct LoginView: View {
             Button(app.text(.login), action: continueAction).buttonStyle(DaamButtonStyle())
                 .disabled(!CredentialsValidator.isValid(email: email, password: password))
             Button(app.text(.demoEntry), action: continueAction).buttonStyle(DaamButtonStyle(outlined: true))
+            Button(app.text(.createAccount), action: registerAction)
+                .font(.subheadline.weight(.semibold))
+                .foregroundStyle(DaamTheme.primary)
             Text(app.text(.demoNotice)).font(.caption).foregroundStyle(DaamTheme.secondary)
         }
     }

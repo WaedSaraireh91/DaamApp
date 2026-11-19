@@ -16,27 +16,136 @@ struct DaamApp: App {
 
 struct AppRoot: View {
     @EnvironmentObject private var app: AppModel
-    @AppStorage("hasSeenOnboarding") private var hasSeenOnboarding = false
-    @State private var hasEntered = false
-    @State private var hasShownSplash = false
+    @Environment(\.scenePhase) private var scenePhase
+    @State private var pendingLink: URL?
+    @State private var showAuthentication = false
+    @State private var service: AuthenticationService?
+    @State private var profile: AccountProfile?
+    @State private var sessionReady = false
+    @State private var splashFinished = false
+    @State private var sessionExpiresAt: Date?
+    @State private var updatePolicy: AppUpdatePolicy?
+    @State private var updateCheckReady = false
+    @State private var updateChecking = false
+    private var mustUpdate: Bool { updateCheckReady && updatePolicy?.forceUpdate == true }
     var body: some View {
-        Group {
-            if !hasShownSplash { SplashView { hasShownSplash = true } }
-            else if !hasSeenOnboarding { OnboardingFlow { hasSeenOnboarding = true } }
-            else if !hasEntered { LoginView { hasEntered = true } }
-            else if let role = app.role {
-                if role == .parent {
-                    if app.snapshot.parentRegistration == nil { RegistrationView(isTeacher: false) }
-                    else { ParentTabs().id(app.language) }
+        ZStack {
+            if mustUpdate, let policy = updatePolicy {
+                ForceUpdateView(policy: policy, checking: updateChecking) {
+                    Task { await refreshUpdatePolicy() }
                 }
-                else if app.snapshot.teacherProfiles[app.selectedTeacherID] == nil { RegistrationView(isTeacher: true) }
-                else if app.snapshot.hourlyRates[app.selectedTeacherID] == nil { TeacherRateView() }
-                else { TeacherTabs().id(app.language) }
-            } else { RoleSelectionView() }
+            } else {
+                PublicTeacherDashboard(isAuthenticated: profile != nil, sessionReady: sessionReady) {
+                    showAuthentication = true
+                }
+                .fullScreenCover(
+                    isPresented: Binding(
+                        get: { showAuthentication && splashFinished && updateCheckReady },
+                        set: { showAuthentication = $0 }
+                    )
+                ) {
+                    Group {
+                        if let configuration = BackendConfiguration.configured {
+                            AuthenticationGateway(
+                                configuration: configuration,
+                                pendingLink: $pendingLink,
+                                service: $service,
+                                profile: $profile,
+                                closeAuthentication: { showAuthentication = false },
+                                onSignOut: { showAuthentication = false }
+                            )
+                        } else {
+                            Page { BrandHeader(); Text(app.text(.backendConfigurationRequired)) }
+                        }
+                    }
+                    .environment(\.layoutDirection, app.language == .arabic ? .rightToLeft : .leftToRight)
+                }
+                .opacity(splashFinished && updateCheckReady ? 1 : 0)
+                .allowsHitTesting(splashFinished && updateCheckReady)
+            }
+
+            if !splashFinished || !updateCheckReady {
+                SplashView {
+                    withAnimation(.easeInOut(duration: 0.45)) {
+                        splashFinished = true
+                    }
+                }
+                .transition(.opacity)
+                .zIndex(1)
+            }
         }
-        .alert(app.text(.errorTitle), isPresented: Binding(get: { app.error != nil }, set: { if !$0 { app.error = nil } })) {
+        .task {
+            await bootstrap()
+        }
+        .onOpenURL { pendingLink = $0; showAuthentication = true }
+        .onChange(of: profile?.id) { _, userID in
+            guard userID != nil, let service else {
+                sessionExpiresAt = nil
+                return
+            }
+            Task { sessionExpiresAt = await service.sessionExpiration() }
+        }
+        .task(id: sessionExpiresAt) {
+            guard let expiry = sessionExpiresAt, profile != nil else { return }
+            let remaining = expiry.timeIntervalSinceNow
+            if remaining > 0 {
+                do { try await Task.sleep(for: .seconds(remaining)) }
+                catch { return }
+            }
+            guard !Task.isCancelled else { return }
+            await service?.expireSession()
+            profile = nil
+            sessionExpiresAt = nil
+            showAuthentication = false
+            withAnimation(.easeInOut(duration: 0.35)) {
+                splashFinished = false
+            }
+        }
+        .onChange(of: scenePhase) { _, phase in
+            guard phase == .active, updateCheckReady else { return }
+            Task { await refreshUpdatePolicy() }
+        }
+        .alert(
+            app.text(.errorTitle),
+            isPresented: Binding(
+                get: { splashFinished && updateCheckReady && !mustUpdate && app.error != nil },
+                set: { if !$0 { app.error = nil } }
+            )
+        ) {
             Button(app.text(.done), role: .cancel) { app.error = nil }
         } message: { Text(app.error.map { app.text($0) } ?? "") }
+    }
+
+    private func bootstrap() async {
+        guard !updateCheckReady else { return }
+        guard let configuration = BackendConfiguration.configured else {
+            sessionReady = true
+            updateCheckReady = true
+            return
+        }
+        let value = AuthenticationService(configuration: configuration)
+        service = value
+        async let updateRequest = value.checkUpdatePolicy()
+        async let restoredProfile = value.restore()
+        updatePolicy = await updateRequest
+        do {
+            profile = try await restoredProfile
+            sessionExpiresAt = await value.sessionExpiration()
+            if profile != nil { showAuthentication = true }
+        } catch {
+            app.error = .authTryAgain
+        }
+        sessionReady = true
+        updateCheckReady = true
+    }
+
+    private func refreshUpdatePolicy() async {
+        guard let service else { return }
+        updateChecking = true
+        defer { updateChecking = false }
+        if let refreshed = await service.checkUpdatePolicy() {
+            updatePolicy = refreshed
+        }
     }
 }
 

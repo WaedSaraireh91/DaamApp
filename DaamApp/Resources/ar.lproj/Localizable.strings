@@ -13,7 +13,7 @@
 "email" = "البريد الإلكتروني";
 "password" = "كلمة المرور";
 "emailHint" = "name@example.com";
-"passwordHint" = "8 أحرف على الأقل";
+"passwordHint" = "٦ أحرف أو أرقام على الأقل";
 "demoEntry" = "استكشاف النسخة التجريبية";
 "demoNotice" = "نسخة تجريبية • لا توجد مدفوعات أو حجوزات حقيقية";
 "onboardTitle1" = "المعلم المناسب يصنع الفرق";
@@ -63,6 +63,11 @@
 "city" = "المدينة";
 "address" = "العنوان بالتفصيل";
 "addressHint" = "الحي، الشارع، رقم المبنى";
+"selectOnMap" = "اختر موقع الحصة على الخريطة";
+"tapMapToChoose" = "اضغط على الخريطة لتحديد مكان لقاء المعلم بطفلك.";
+"findingAddress" = "جارٍ تحديد العنوان…";
+"confirmLocation" = "استخدام هذا الموقع";
+"openDirections" = "الاتجاهات إلى موقع الطالب";
 "notes" = "ملاحظات للمعلم";
 "notesHint" = "أخبرنا بما يحتاجه طفلك";
 "review" = "مراجعة الحجز";
@@ -73,9 +78,27 @@
 "successTitle" = "خطوة جميلة نحو التعلم!";
 "successBody" = "تم إرسال طلبك. ستظهر الحصة كمؤكدة بعد قبول المعلم.";
 "viewBookings" = "عرض حجوزاتي";
+"latestLesson" = "آخر حصة لك";
+"noUpcomingLessons" = "لا توجد حصة قادمة حالياً. يمكنك اختيار معلم عندما تكون مستعداً.";
+"teacherPhoto" = "الصورة الشخصية";
+"teacherPhotoHint" = "ساعد أولياء الأمور على التعرّف عليك. ستظهر الصورة في بطاقتك.";
+"addTeacherPhoto" = "إضافة صورة";
+"changeTeacherPhoto" = "اختيار صورة أخرى";
+"profilePhotoError" = "تعذر استخدام هذه الصورة. اختر صورة أخرى وحاول مجدداً.";
 "pending" = "بانتظار القبول";
 "accepted" = "مؤكدة";
 "declined" = "غير مقبولة";
+"notifications" = "التحديثات";
+"noNotifications" = "ستظهر هنا تحديثات الحصص.";
+"notificationNewRequest" = "طلب حصة جديد بانتظار ردك";
+"notificationRequestPending" = "تم إرسال طلبك وبانتظار رد المعلم";
+"notificationLessonAccepted" = "تم تأكيد الحصة";
+"notificationLessonDeclined" = "لم يتمكن المعلم من قبول هذا الطلب";
+"notificationLessonCancelled" = "تم إلغاء هذه الحصة";
+"notificationLessonCompleted" = "اكتملت هذه الحصة";
+"notificationTransferWaiting" = "تحويل CliQ بانتظار تأكيد مالك التطبيق";
+"notificationTransferVerified" = "تم تأكيد تحويل CliQ والحصة بانتظار القبول";
+"notificationTransferRejected" = "يرجى مراجعة بيانات CliQ وإعادة إرسالها";
 "emptyBookings" = "بداية التعلم من هنا";
 "emptyBookingsBody" = "اختر معلماً واحجز أول حصة لطفلك.";
 "emptyFavorites" = "معلموك المفضلون في مكان واحد";
@@ -143,6 +166,22 @@
 "khalda" = "خلدا";
 "shmeisani" = "الشميساني";
 "splashMessage" = "معك في كل خطوة نحو التعلم.";
+"skipIntro" = "متابعة";
+"forceUpdateTitle" = "حدّث دعم للمتابعة";
+"forceUpdateBody" = "يتوفر تحديث إلزامي. ثبّت أحدث إصدار لمتابعة استخدام دعم.";
+"updateNow" = "حدّث التطبيق الآن";
+"checkAgain" = "تحقق مرة أخرى";
+"messages" = "الرسائل";
+"inbox" = "الوارد";
+"newMessage" = "جديد";
+"sent" = "المرسلة";
+"supportIntro" = "أرسل رسالة إلى فريق دعم. ستظهر الردود في صندوق الوارد.";
+"messageText" = "اكتب رسالتك";
+"messageSent" = "أُرسلت رسالتك إلى فريق دعم.";
+"noInboxMessages" = "ستظهر ردود فريق الدعم هنا.";
+"noSentMessages" = "لم ترسل أي رسالة بعد.";
+"supportRecipient" = "إلى فريق دعم · DaamSupport@gmail.com";
+"supportAnswered" = "تم الرد";
 "rateSetupTitle" = "حدّد قيمة حصتك";
 "rateSetupBody" = "سيظهر سعرك بالساعة لولي الأمر قبل الحجز.";
 "hourlyRate" = "سعر الساعة بالدينار الأردني";
@@ -150,7 +189,8 @@
 "saveRate" = "حفظ سعر الساعة";
 "invalidRate" = "أدخل سعراً صحيحاً بين 1 و500 د.أ.";
 "cliqTitle" = "رسوم القبول عبر CliQ";
-"cliqBody" = "حوّل 1 د.أ عبر CliQ إلى الحساب المحدد، ثم أرسل رقم مرجع التحويل. لا يمكن قبول الحصة قبل التحقق من الدفع.";
+"cliqBody" = "أول قبول حصة لكل معلم مجاني. بعد ذلك حوّل 1 د.أ عبر CliQ للحساب المحدد وأرسل رقم المرجع. يؤكد مالك التطبيق استلام التحويل قبل قبول الحصة.";
+"payAcceptanceFee" = "دفع رسوم القبول 1 د.أ";
 "cliqRecipient" = "المستفيد";
 "cliqAlias" = "اسم الحساب / المعرّف";
 "cliqNotConfigured" = "سيتم عرض حساب CliQ بعد تزويدنا ببيانات المستفيد. لا ترسل أي مبلغ حالياً.";
@@ -180,6 +220,24 @@
 "paymentSummary" = "تفاصيل الدفع";
 
 "registrationTitle" = "أكمل ملفك الشخصي";
+"createAccount" = "إنشاء حساب";
+"authWelcome" = "حسابك جاهز";
+"authPhaseNotice" = "تم تسجيل دخولك بأمان. سنربط إكمال الملف الشخصي وحجز الدروس في التحديث القادم.";
+"signOut" = "تسجيل الخروج";
+"verifyEmail" = "تأكيد البريد الإلكتروني";
+"verificationInstructions" = "تحقق من بريدك والرسائل غير المرغوب فيها. افتح رابط التأكيد في الرسالة، ثم عد إلى التطبيق وسجل الدخول. إذا كان لديك حساب بالفعل، عد لتسجيل الدخول.";
+"verificationCode" = "رمز تأكيد البريد الإلكتروني";
+"fullName" = "الاسم الكامل";
+"confirmPassword" = "تأكيد كلمة المرور";
+"passwordRule" = "٦ أحرف أو أرقام على الأقل. يمكن استخدام أرقام فقط.";
+"resendCode" = "إعادة إرسال رسالة التأكيد";
+"backToLogin" = "العودة لتسجيل الدخول";
+"authTryAgain" = "تعذر الاتصال أو إكمال الطلب. يرجى المحاولة مجدداً.";
+"authThrottled" = "محاولات كثيرة. يرجى الانتظار قبل المحاولة مجدداً.";
+"authRejected" = "تعذر إكمال تسجيل الدخول. تحقق من بياناتك وتأكيد بريدك الإلكتروني ثم حاول مجدداً.";
+"termsTitle" = "شروط الاستخدام";
+"agreeContinue" = "أوافق وأتابع";
+"dismissAction" = "إغلاق";
 
 "experienceBrief" = "الخبرة التعليمية";
 
@@ -246,3 +304,80 @@
 "area_maan" = "معان";
 
 "area_aqaba" = "العقبة";
+
+"authNameRequired" = "أدخل اسمك الكامل (من حرفين إلى 100 حرف).";
+
+"authEmailRequired" = "أدخل بريداً إلكترونياً صحيحاً.";
+
+"authPasswordRequired" = "أدخل كلمة مرور من ٦ أحرف أو أرقام على الأقل.";
+
+"authPasswordMismatch" = "كلمتا المرور غير متطابقتين. أدخل كلمة المرور نفسها في الحقلين.";
+
+"authEmailResent" = "تم طلب إعادة إرسال رسالة التأكيد. تحقق من بريدك والرسائل غير المرغوب فيها.";
+
+// Shared backend MVP
+"firstName" = "الاسم الأول";
+"lastName" = "اسم العائلة";
+"phoneNumber" = "رقم الهاتف";
+"forgotPasswordTitle" = "نسيت كلمة المرور؟";
+"resetPasswordTitle" = "تعيين كلمة مرور جديدة";
+"sendResetLink" = "إرسال رابط الاستعادة";
+"resetEmailSent" = "إذا كان الحساب موجوداً، تم إرسال رابط استعادة كلمة المرور.";
+"passwordResetDone" = "تم تحديث كلمة المرور. سجل الدخول بكلمة المرور الجديدة.";
+"emailVerifiedDone" = "تم تأكيد البريد الإلكتروني. يمكنك تسجيل الدخول الآن.";
+"linkExpired" = "الرابط غير صالح أو انتهت صلاحيته. اطلب رابطاً جديداً.";
+"emailAlreadyUsed" = "البريد الإلكتروني مسجل بالفعل. يرجى تسجيل الدخول.";
+"checkDetails" = "تحقق من البيانات المطلوبة وحاول مرة أخرى.";
+"backendConfigurationRequired" = "يرجى ضبط رابط HTTPS للخادم قبل التشغيل على الجهاز. الإعداد المحلي مخصص للمحاكي فقط.";
+"subjectsTitle" = "المواد الدراسية";
+"teacherReviewPending" = "بانتظار اعتماد المعلم";
+"addAvailability" = "إضافة موعد متاح";
+"completeLesson" = "تأكيد اكتمال الدرس";
+"completed" = "مكتمل";
+"cancelled" = "ملغى";
+"supportTitle" = "الدعم";
+"supportMessage" = "كيف يمكننا مساعدتك؟";
+"sendMessage" = "إرسال الرسالة";
+"supportPending" = "بانتظار رد فريق الدعم.";
+"approveTeacher" = "اعتماد المعلم";
+"replyTitle" = "الرد";
+"loadMore" = "عرض المزيد";
+"browseTeachers" = "تصفح المعلمين";
+"registerOrLogin" = "سجّل أو ادخل للبدء";
+"findYourTeacher" = "اختر معلمك القادم";
+"learningStartsHere" = "دعم بسيط، ومستقبل أجمل";
+"discoveryHeadline" = "التعلّم الأفضل يبدأ بالمعلم المناسب.";
+"discoverySubtitle" = "تعرّف على معلمين خصوصيين في منطقتك. اختر المادة والموعد المناسب، وخذ خطوتك القادمة مع دعم.";
+"localTeachers" = "دروس خصوصية في أنحاء الأردن";
+"flexibleTimes" = "مواعيد تناسب يومك";
+"directoryUnavailable" = "تعذر تحميل المعلمين. يرجى المحاولة مرة أخرى.";
+"directoryEmptyBody" = "لا يوجد معلمون معتمدون لهذه المنطقة والمادة حالياً. جرّب منطقة أخرى أو انضم إلى دعم.";
+"joinDaam" = "انضم إلى دعم";
+"teachersComingSoon" = "معلمك القادم قريباً";
+"howDaamWorks" = "خطوات أبسط للتعلّم";
+"chooseYourTeacher" = "اختر معلماً في منطقتك";
+"chooseYourTime" = "اختر موعد الدرس المناسب";
+"learnAndPayCash" = "التقِ وتعلّم وادفع نقداً";
+"browseFreely" = "تصفح بحرية، وسجّل الدخول عندما تكون مستعداً للحجز.";
+"reviewedTeacher" = "تمت مراجعة الملف";
+"viewTeacher" = "عرض الملف";
+"welcomeBack" = "خطوتك القادمة تبدأ هنا.";
+"authNewSubtitle" = "حساب واحد للتعلّم والتعليم وكل ما تحتاجه بينهما.";
+"loginMethod" = "طريقة الدخول";
+"localPhoneTitle" = "تجربة الدخول بالهاتف";
+"localPhoneBody" = "وضع تجريبي: لن تُرسل رسالة نصية. سيظهر رمز التحقق هنا.";
+"localCodeLabel" = "رمزك التجريبي:";
+"codeExpiry" = "تنتهي صلاحية الرمز بعد ٥ دقائق. يمكنك طلب رمز جديد بعد ٦٠ ثانية.";
+"changePhone" = "تغيير رقم الهاتف";
+"sendPhoneCode" = "الحصول على رمز التحقق";
+"verifyAndContinue" = "تحقق وتابع";
+"invalidPhone" = "أدخل رقم هاتف صالحاً مثل ‎+96279XXXXXXX.";
+"invalidPhoneCode" = "الرمز غير صحيح أو منتهي الصلاحية أو مستخدم سابقاً.";
+"phoneCooldown" = "يرجى الانتظار ٦٠ ثانية قبل طلب رمز جديد.";
+"phoneRegistrationRequired" = "لا يوجد حساب لهذا الهاتف. اختر إنشاء حساب أولاً.";
+
+"phoneAlreadyRegistered" = "رقم الهاتف مسجّل بالفعل. يرجى تسجيل الدخول.";
+
+"phoneVerificationCode" = "رمز التحقق من رقم الهاتف";
+"resendPhoneCode" = "إعادة إرسال رمز التحقق";
+"invalidPersonName" = "تحقق من الاسم الأول واسم العائلة. استخدم الأحرف والمسافات دون أرقام أو رموز.";

@@ -13,21 +13,29 @@
 		556F1B23B280CA2D19B5AF53 /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B41940EC7FD9DDB04FDB19 /* AppModel.swift */; };
 		59A2FD77F018D2076F9E5A68 /* AuthenticationViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA18C62D9F6055AE4DCC7492 /* AuthenticationViews.swift */; };
 		5A6DACAD4F4418918C800CCA /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F48BF4FD17366E3299380B /* SplashView.swift */; };
+		5ACD89D806BFD5FF9F8778F5 /* TutoringAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242A95B9FF790254CCB58F3 /* TutoringAPI.swift */; };
 		5FADE1CFEB08DF5B50FD32EF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CDDF6CDEDCE17BB839ED20E4 /* Localizable.strings */; };
 		6577CB35E633A1C243334180 /* OwnerPaymentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826DCBAE7C21DC01C97966BD /* OwnerPaymentsView.swift */; };
 		76126909F9208496650E28B2 /* LocalizedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FC6862A2CF377955238208 /* LocalizedTextField.swift */; };
+		77AADF383FC0D8B60F4F4684 /* PublicTeacherDashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61888E066C9F80F776964E88 /* PublicTeacherDashboard.swift */; };
 		7C976E697C16321B5F9F8C24 /* DaamApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24453A57EE3D7421838E9665 /* DaamApp.swift */; };
 		843FFD6E7BB053D846DFFCB3 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75030B33ADDC97494E66D204 /* DashboardView.swift */; };
 		846AA7ABC8C106ADA65F48A7 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707954C77A8C04A935804C96 /* Models.swift */; };
 		872AFCB84CBAB8451B7B7615 /* SearchResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A0881234C8B588096F67D9 /* SearchResultsView.swift */; };
 		8AE6B88C527E28E9AC356E95 /* L10n.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1194D71A72E26B979399480 /* L10n.swift */; };
 		9181D35CAD6793F02EC08E3A /* BookingFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F172EB0D0552E79476548CF /* BookingFlow.swift */; };
+		93C7686568C66DE7A550988D /* LiveOwnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3068FAC2F7AFF95BD837EBF /* LiveOwnerView.swift */; };
 		9FA85A74C537ABE9D4C94238 /* Lesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5FCB28844FEB02E16918C9 /* Lesson.swift */; };
 		A1214916F76A402BE20C7CD4 /* ViewModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8EE4CBC401219E04B96032 /* ViewModels.swift */; };
+		A5F51121351E30B4908C64E2 /* LiveTutoringView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A48B5ED2C3D170B97380B6 /* LiveTutoringView.swift */; };
 		AED60512DC2245B00C977F1D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02209A7D0367F2EBF8EBF30B /* Foundation.framework */; };
 		B14D7A78CFC5B492C57F2207 /* MockTutoringRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5971DA63B175AA155980CE15 /* MockTutoringRepository.swift */; };
+		B4408F0E0A9F20B1FD02462A /* AuthenticationGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10170DBD3F63C2592EC95EA1 /* AuthenticationGateway.swift */; };
+		B9EA0D4A4DCD71AE3FE135B5 /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06BD902174070A1F830AE9A /* AuthenticationService.swift */; };
+		CCEA352F2DF6F8A2FD6C1C85 /* SupabaseConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8FAA3A048CBFE562C37EC040 /* SupabaseConfig.plist */; };
 		CEE8C21E91BB097635D346C5 /* TeacherSetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670A8F95D470CEA7054B64BA /* TeacherSetupView.swift */; };
 		D0D3C5B7E85AD435B0148456 /* LocalLessonRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDA6FD257C15D20F723501F /* LocalLessonRepository.swift */; };
+		DF1688F5E304BE6BB4036523 /* BackendConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = BA3A1A4226101811B5DD03F9 /* BackendConfig.plist */; };
 		E3B7FEB92564877E5539A991 /* Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561D183A5A93C01EB3AB79C6 /* Components.swift */; };
 /* End PBXBuildFile section */
 
@@ -35,24 +43,32 @@
 		02209A7D0367F2EBF8EBF30B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		09F48BF4FD17366E3299380B /* SplashView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		0B1CD56D6119EB4DD7834C92 /* DaamApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DaamApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		10170DBD3F63C2592EC95EA1 /* AuthenticationGateway.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AuthenticationGateway.swift; sourceTree = "<group>"; };
 		2069A01AE081A96E9616CC6A /* ParentViews.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ParentViews.swift; sourceTree = "<group>"; };
 		24453A57EE3D7421838E9665 /* DaamApp.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DaamApp.swift; sourceTree = "<group>"; };
 		561D183A5A93C01EB3AB79C6 /* Components.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Components.swift; sourceTree = "<group>"; };
 		5971DA63B175AA155980CE15 /* MockTutoringRepository.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MockTutoringRepository.swift; sourceTree = "<group>"; };
+		61888E066C9F80F776964E88 /* PublicTeacherDashboard.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PublicTeacherDashboard.swift; sourceTree = "<group>"; };
 		670A8F95D470CEA7054B64BA /* TeacherSetupView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TeacherSetupView.swift; sourceTree = "<group>"; };
 		6F172EB0D0552E79476548CF /* BookingFlow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BookingFlow.swift; sourceTree = "<group>"; };
 		707954C77A8C04A935804C96 /* Models.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		75030B33ADDC97494E66D204 /* DashboardView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
 		826DCBAE7C21DC01C97966BD /* OwnerPaymentsView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OwnerPaymentsView.swift; sourceTree = "<group>"; };
+		8FAA3A048CBFE562C37EC040 /* SupabaseConfig.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = SupabaseConfig.plist; sourceTree = "<group>"; };
+		9242A95B9FF790254CCB58F3 /* TutoringAPI.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TutoringAPI.swift; sourceTree = "<group>"; };
 		92B41940EC7FD9DDB04FDB19 /* AppModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
 		9CDA6FD257C15D20F723501F /* LocalLessonRepository.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LocalLessonRepository.swift; sourceTree = "<group>"; };
+		A3068FAC2F7AFF95BD837EBF /* LiveOwnerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LiveOwnerView.swift; sourceTree = "<group>"; };
 		B0FC6862A2CF377955238208 /* LocalizedTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LocalizedTextField.swift; sourceTree = "<group>"; };
+		B2A48B5ED2C3D170B97380B6 /* LiveTutoringView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LiveTutoringView.swift; sourceTree = "<group>"; };
+		BA3A1A4226101811B5DD03F9 /* BackendConfig.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = BackendConfig.plist; sourceTree = "<group>"; };
 		BA9B63E12FDBC3268DCECDCC /* ar */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C2A0881234C8B588096F67D9 /* SearchResultsView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SearchResultsView.swift; sourceTree = "<group>"; };
 		CB8EE4CBC401219E04B96032 /* ViewModels.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ViewModels.swift; sourceTree = "<group>"; };
 		CBC951C6E894B71BB96D6BD1 /* Assets.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D95EF3467141B25704E0AABF /* DaamTheme.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DaamTheme.swift; sourceTree = "<group>"; };
 		DF5FCB28844FEB02E16918C9 /* Lesson.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Lesson.swift; sourceTree = "<group>"; };
+		E06BD902174070A1F830AE9A /* AuthenticationService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
 		E1194D71A72E26B979399480 /* L10n.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = L10n.swift; sourceTree = "<group>"; };
 		EA18C62D9F6055AE4DCC7492 /* AuthenticationViews.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AuthenticationViews.swift; sourceTree = "<group>"; };
 		F8ABDA79F7CD26255366B965 /* en */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -75,6 +91,8 @@
 			children = (
 				CBC951C6E894B71BB96D6BD1 /* Assets.xcassets */,
 				CDDF6CDEDCE17BB839ED20E4 /* Localizable.strings */,
+				8FAA3A048CBFE562C37EC040 /* SupabaseConfig.plist */,
+				BA3A1A4226101811B5DD03F9 /* BackendConfig.plist */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -101,6 +119,8 @@
 			children = (
 				5971DA63B175AA155980CE15 /* MockTutoringRepository.swift */,
 				9CDA6FD257C15D20F723501F /* LocalLessonRepository.swift */,
+				E06BD902174070A1F830AE9A /* AuthenticationService.swift */,
+				9242A95B9FF790254CCB58F3 /* TutoringAPI.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -173,6 +193,10 @@
 				09F48BF4FD17366E3299380B /* SplashView.swift */,
 				670A8F95D470CEA7054B64BA /* TeacherSetupView.swift */,
 				826DCBAE7C21DC01C97966BD /* OwnerPaymentsView.swift */,
+				10170DBD3F63C2592EC95EA1 /* AuthenticationGateway.swift */,
+				B2A48B5ED2C3D170B97380B6 /* LiveTutoringView.swift */,
+				A3068FAC2F7AFF95BD837EBF /* LiveOwnerView.swift */,
+				61888E066C9F80F776964E88 /* PublicTeacherDashboard.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -248,6 +272,8 @@
 			files = (
 				42034A1F756567516617CE35 /* Assets.xcassets in Resources */,
 				5FADE1CFEB08DF5B50FD32EF /* Localizable.strings in Resources */,
+				CCEA352F2DF6F8A2FD6C1C85 /* SupabaseConfig.plist in Resources */,
+				DF1688F5E304BE6BB4036523 /* BackendConfig.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,6 +303,12 @@
 				5A6DACAD4F4418918C800CCA /* SplashView.swift in Sources */,
 				CEE8C21E91BB097635D346C5 /* TeacherSetupView.swift in Sources */,
 				6577CB35E633A1C243334180 /* OwnerPaymentsView.swift in Sources */,
+				B9EA0D4A4DCD71AE3FE135B5 /* AuthenticationService.swift in Sources */,
+				B4408F0E0A9F20B1FD02462A /* AuthenticationGateway.swift in Sources */,
+				5ACD89D806BFD5FF9F8778F5 /* TutoringAPI.swift in Sources */,
+				A5F51121351E30B4908C64E2 /* LiveTutoringView.swift in Sources */,
+				93C7686568C66DE7A550988D /* LiveOwnerView.swift in Sources */,
+				77AADF383FC0D8B60F4F4684 /* PublicTeacherDashboard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,6 +337,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = R8KX5PZ67H;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DaamApp/Resources/AppInfo.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "دعم";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -332,6 +365,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = R8KX5PZ67H;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DaamApp/Resources/AppInfo.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "دعم";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

@@ -139,12 +139,11 @@ final class AppModel: ObservableObject {
         changed.parentRegistration = ParentRegistration(area: area, declaration: DeclarationRecord(acceptedAt: Date(), version: "parent-v1", language: language.rawValue))
         return commit(changed)
     }
-    func saveTeacherRegistration(bio: String, areas: Set<JordanArea>, certificate: String, accepted: Bool) -> Bool {
+    func saveTeacherRegistration(bio: String, areas: Set<JordanArea>, certificate: String?, accepted: Bool) -> Bool {
         let cleanBio = bio.trimmingCharacters(in: .whitespacesAndNewlines)
-        guard accepted, (20...1000).contains(cleanBio.count), !areas.isEmpty,
-              !certificate.isEmpty, FileManager.default.fileExists(atPath: Self.certificateDirectory.appendingPathComponent(certificate).path) else { error = .registrationRequired; return false }
+        guard accepted, (20...1000).contains(cleanBio.count), !areas.isEmpty, FileManager.default.fileExists(atPath: Self.certificateDirectory.appendingPathComponent(certificate ?? "").path) else { error = .registrationRequired; return false }
         var changed = snapshot
-        changed.teacherProfiles[selectedTeacherID] = TeacherRegistration(bio: cleanBio, areas: areas, certificateFile: certificate, declaration: DeclarationRecord(acceptedAt: Date(), version: "teacher-v1", language: language.rawValue))
+        changed.teacherProfiles[selectedTeacherID] = TeacherRegistration(bio: cleanBio, areas: areas, certificateFile: certificate ?? "", declaration: DeclarationRecord(acceptedAt: Date(), version: "teacher-v1", language: language.rawValue))
         return commit(changed)
     }
     static var certificateDirectory: URL {

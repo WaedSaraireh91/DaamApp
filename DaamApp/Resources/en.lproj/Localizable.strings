@@ -13,7 +13,7 @@
 "email" = "Email address";
 "password" = "Password";
 "emailHint" = "name@example.com";
-"passwordHint" = "At least 8 characters";
+"passwordHint" = "At least 6 characters";
 "demoEntry" = "Explore the demo";
 "demoNotice" = "Demo • No real payments or bookings";
 "onboardTitle1" = "The right teacher makes a difference";
@@ -63,6 +63,11 @@
 "city" = "City";
 "address" = "Full address";
 "addressHint" = "Area, street, building number";
+"selectOnMap" = "Choose lesson location on map";
+"tapMapToChoose" = "Tap the map where the teacher should meet your child.";
+"findingAddress" = "Finding the address…";
+"confirmLocation" = "Use this location";
+"openDirections" = "Directions to student";
 "notes" = "Notes for your teacher";
 "notesHint" = "Tell us what your child needs";
 "review" = "Review booking";
@@ -73,9 +78,27 @@
 "successTitle" = "A lovely step toward learning!";
 "successBody" = "Your request has been sent. Your lesson is confirmed once the teacher accepts.";
 "viewBookings" = "View my lessons";
+"latestLesson" = "Your latest lesson";
+"noUpcomingLessons" = "No upcoming lesson yet. Choose a teacher when you’re ready.";
+"teacherPhoto" = "Profile photo";
+"teacherPhotoHint" = "Help parents recognize you. This photo appears on your teacher card.";
+"addTeacherPhoto" = "Add a photo";
+"changeTeacherPhoto" = "Choose another photo";
+"profilePhotoError" = "We couldn’t use that photo. Choose a different image and try again.";
 "pending" = "Awaiting acceptance";
 "accepted" = "Confirmed";
 "declined" = "Declined";
+"notifications" = "Updates";
+"noNotifications" = "Your lesson updates will appear here.";
+"notificationNewRequest" = "New lesson request needs your response";
+"notificationRequestPending" = "Your request was sent and is awaiting the teacher";
+"notificationLessonAccepted" = "Your lesson is confirmed";
+"notificationLessonDeclined" = "The teacher declined this request";
+"notificationLessonCancelled" = "This lesson was cancelled";
+"notificationLessonCompleted" = "This lesson is complete";
+"notificationTransferWaiting" = "CliQ transfer is waiting for owner verification";
+"notificationTransferVerified" = "CliQ transfer verified; lesson is awaiting acceptance";
+"notificationTransferRejected" = "CliQ details need to be checked and resubmitted";
 "emptyBookings" = "Your learning journey starts here";
 "emptyBookingsBody" = "Choose a teacher and book your child’s first lesson.";
 "emptyFavorites" = "Your favorite teachers, together";
@@ -143,6 +166,22 @@
 "khalda" = "Khalda";
 "shmeisani" = "Shmeisani";
 "splashMessage" = "By your side, every step of learning.";
+"skipIntro" = "Continue";
+"forceUpdateTitle" = "Update Daam to continue";
+"forceUpdateBody" = "A required update is available. Install the latest version to keep using Daam.";
+"updateNow" = "Update now";
+"checkAgain" = "Check again";
+"messages" = "Messages";
+"inbox" = "Inbox";
+"newMessage" = "New";
+"sent" = "Sent";
+"supportIntro" = "Send a message to Daam Support. Replies will appear in your inbox.";
+"messageText" = "Write your message";
+"messageSent" = "Your message was sent to Daam Support.";
+"noInboxMessages" = "Support replies will appear here.";
+"noSentMessages" = "You haven’t sent a message yet.";
+"supportRecipient" = "To Daam Support · DaamSupport@gmail.com";
+"supportAnswered" = "Answered";
 "rateSetupTitle" = "Set your lesson rate";
 "rateSetupBody" = "Parents will see your hourly rate before booking.";
 "hourlyRate" = "Hourly rate in Jordanian dinars";
@@ -150,7 +189,8 @@
 "saveRate" = "Save hourly rate";
 "invalidRate" = "Enter a whole-number rate between JOD 1 and JOD 500.";
 "cliqTitle" = "Acceptance fee via CliQ";
-"cliqBody" = "Transfer JOD 1 by CliQ to the specified account, then submit the transfer reference. The lesson cannot be accepted until payment is verified.";
+"cliqBody" = "Your first lesson acceptance is free. After that, transfer JOD 1 by CliQ to the listed account and submit the reference. The app owner verifies the transfer before you accept the lesson.";
+"payAcceptanceFee" = "Pay JOD 1 acceptance fee";
 "cliqRecipient" = "Recipient";
 "cliqAlias" = "Account / alias";
 "cliqNotConfigured" = "The CliQ account will appear once recipient details are supplied. Do not send money yet.";
@@ -180,6 +220,24 @@
 "paymentSummary" = "Payment summary";
 
 "registrationTitle" = "Complete your profile";
+"createAccount" = "Create an account";
+"authWelcome" = "Your account is ready";
+"authPhaseNotice" = "You are signed in securely. Profile completion and lesson booking will be connected in the next update.";
+"signOut" = "Sign out";
+"verifyEmail" = "Verify your email";
+"verificationInstructions" = "Check your inbox and spam folder for the confirmation email. Open its link to confirm your address, then return here and log in. If you already have an account, return to login.";
+"verificationCode" = "Email confirmation code";
+"fullName" = "Full name";
+"confirmPassword" = "Confirm password";
+"passwordRule" = "At least 6 characters. Numbers-only passwords are allowed.";
+"resendCode" = "Resend confirmation email";
+"backToLogin" = "Back to login";
+"authTryAgain" = "Unable to connect or complete this request. Please try again.";
+"authThrottled" = "Too many attempts. Please wait before trying again.";
+"authRejected" = "We could not complete sign-in. Check your details and email confirmation, then try again.";
+"termsTitle" = "Terms of use";
+"agreeContinue" = "Agree & Continue";
+"dismissAction" = "Dismiss";
 
 "experienceBrief" = "Teaching experience";
 
@@ -246,3 +304,80 @@
 "area_maan" = "Ma’an";
 
 "area_aqaba" = "Aqaba";
+
+"authNameRequired" = "Enter your full name (2–100 characters).";
+
+"authEmailRequired" = "Enter a valid email address.";
+
+"authPasswordRequired" = "Enter a password with at least 6 characters.";
+
+"authPasswordMismatch" = "Your passwords do not match. Enter the same password in both fields.";
+
+"authEmailResent" = "Confirmation email requested. Check your inbox and spam folder.";
+
+// Shared backend MVP
+"firstName" = "First name";
+"lastName" = "Last name";
+"phoneNumber" = "Phone number";
+"forgotPasswordTitle" = "Forgot password?";
+"resetPasswordTitle" = "Reset password";
+"sendResetLink" = "Send reset link";
+"resetEmailSent" = "If an account exists, a reset link has been sent.";
+"passwordResetDone" = "Password updated. Sign in with your new password.";
+"emailVerifiedDone" = "Email verified. You can now sign in.";
+"linkExpired" = "This link is invalid or expired. Request a new one.";
+"emailAlreadyUsed" = "This email is already registered. Please sign in.";
+"checkDetails" = "Check the required details and try again.";
+"backendConfigurationRequired" = "Set the backend HTTPS URL before running on a device. Localhost is configured for Simulator testing only.";
+"subjectsTitle" = "Subjects";
+"teacherReviewPending" = "Teacher approval pending";
+"addAvailability" = "Add available time";
+"completeLesson" = "Mark lesson completed";
+"completed" = "Completed";
+"cancelled" = "Cancelled";
+"supportTitle" = "Support";
+"supportMessage" = "How can we help?";
+"sendMessage" = "Send message";
+"supportPending" = "Awaiting a reply from support.";
+"approveTeacher" = "Approve teacher";
+"replyTitle" = "Reply";
+"loadMore" = "Load more";
+"browseTeachers" = "Browse teachers";
+"registerOrLogin" = "Register or log in to start";
+"findYourTeacher" = "Find your next teacher";
+"learningStartsHere" = "A little support. A brighter future.";
+"discoveryHeadline" = "Great learning starts with the right teacher.";
+"discoverySubtitle" = "Explore private teachers in your area. Choose a subject, find a time, and take the next step with Daam.";
+"localTeachers" = "Private lessons across Jordan";
+"flexibleTimes" = "Times that fit your day";
+"directoryUnavailable" = "We couldn’t load teachers. Please try again.";
+"directoryEmptyBody" = "No approved teachers match this area and subject yet. Try another area or join Daam to get started.";
+"joinDaam" = "Join Daam";
+"teachersComingSoon" = "Your next teacher is on the way";
+"howDaamWorks" = "A simpler way to learn";
+"chooseYourTeacher" = "Find a teacher in your area";
+"chooseYourTime" = "Choose an available lesson time";
+"learnAndPayCash" = "Meet, learn, and pay in cash";
+"browseFreely" = "Explore freely. Sign in when you’re ready to book.";
+"reviewedTeacher" = "Profile reviewed";
+"viewTeacher" = "View profile";
+"welcomeBack" = "Your next step starts here.";
+"authNewSubtitle" = "One account for learning, teaching, and everything in between.";
+"loginMethod" = "Sign-in method";
+"localPhoneTitle" = "Local phone testing";
+"localPhoneBody" = "Test mode: no SMS will be sent. Your verification code will appear here.";
+"localCodeLabel" = "Your test code:";
+"codeExpiry" = "Code expires in 5 minutes. You can request another after 60 seconds.";
+"changePhone" = "Change phone number";
+"sendPhoneCode" = "Get verification code";
+"verifyAndContinue" = "Verify and continue";
+"invalidPhone" = "Enter a valid phone number, such as +96279XXXXXXX.";
+"invalidPhoneCode" = "The code is incorrect, expired, or already used.";
+"phoneCooldown" = "Please wait 60 seconds before requesting another code.";
+"phoneRegistrationRequired" = "No phone account exists yet. Choose Create account first.";
+
+"phoneAlreadyRegistered" = "This phone number already has an account. Please log in.";
+
+"phoneVerificationCode" = "Phone verification code";
+"resendPhoneCode" = "Resend verification code";
+"invalidPersonName" = "Check your first and last names. Use letters, spaces, apostrophes or hyphens.";

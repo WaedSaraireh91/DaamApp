@@ -19,6 +19,9 @@ struct DaamButtonStyle: ButtonStyle {
         let tint = authentication ? DaamTheme.authPrimary : DaamTheme.primary
         configuration.label
             .font(.callout.weight(.bold))
+            .multilineTextAlignment(.center)
+            .padding(.horizontal, 22)
+            .padding(.vertical, 14)
             .frame(maxWidth: .infinity).frame(minHeight: 52)
             .foregroundStyle(outlined ? tint : .white)
             .background(outlined ? .white : tint, in: RoundedRectangle(cornerRadius: 16))
@@ -30,7 +33,7 @@ struct DaamButtonStyle: ButtonStyle {
 extension View {
     func daamCard(radius: CGFloat = 16) -> some View {
         background(.white, in: RoundedRectangle(cornerRadius: radius))
-            .overlay(RoundedRectangle(cornerRadius: radius).stroke(DaamTheme.primary.opacity(0.16), lineWidth: 1))
+            .overlay(RoundedRectangle(cornerRadius: radius).stroke(DaamTheme.primary.opacity(0.15), lineWidth: 1))
     }
     func daamScreen(framed: Bool = true) -> some View {
         modifier(DaamPageSurface(framed: framed))
@@ -52,7 +55,7 @@ struct DaamPageSurface: ViewModifier {
                 .clipShape(RoundedRectangle(cornerRadius: 26, style: .continuous))
                 .overlay {
                     RoundedRectangle(cornerRadius: 26, style: .continuous)
-                        .strokeBorder(DaamTheme.primary.opacity(0.34), lineWidth: 1.5)
+                        .strokeBorder(DaamTheme.primary.opacity(0.22), lineWidth: 1)
                         .allowsHitTesting(false)
                         .accessibilityHidden(true)
                 }
@@ -73,10 +76,11 @@ struct Field: View {
     let placeholder: String
     @Binding var text: String
     var secure = false
+    var keyboard: UIKeyboardType = .default
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
             Text(title).font(.footnote.weight(.bold))
-            LocalizedTextField(placeholder: placeholder, text: $text, secure: secure, keyboard: secure ? .default : .emailAddress)
+            LocalizedTextField(placeholder: placeholder, text: $text, secure: secure, keyboard: secure ? .default : keyboard)
                 .frame(height: 26).padding(.horizontal, 16).frame(minHeight: 52)
                 .daamCard(radius: 14)
             .accessibilityLabel(title)

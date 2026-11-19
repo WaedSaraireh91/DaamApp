@@ -1,22 +1,16 @@
 import SwiftUI
 
-enum Artwork: String { case logo = "DaamLogo", learning = "LearningArt", teaching = "TeachingArt", schedule = "ScheduleArt" }
+enum Artwork: String { case logo = "DaamMark", learning = "LearningArt", teaching = "TeachingArt", schedule = "ScheduleArt" }
 
 struct AnimatedArtwork: View {
     let artwork: Artwork
     var height: CGFloat = 190
-    @Environment(\.accessibilityReduceMotion) private var reduceMotion
-    @State private var floating = false
     var body: some View {
         Image(artwork.rawValue).resizable().scaledToFit()
             .frame(maxWidth: .infinity).frame(height: height)
-            .scaleEffect(floating && !reduceMotion ? 1.025 : 1)
-            .offset(y: floating && !reduceMotion ? -4 : 0)
             .background(Color("Canvas"))
             .clipShape(RoundedRectangle(cornerRadius: 24))
             .accessibilityHidden(true)
-            .onAppear { floating = true }
-            .animation(reduceMotion ? nil : .easeInOut(duration: 3).repeatForever(autoreverses: true), value: floating)
     }
 }
 
@@ -35,7 +29,7 @@ struct BrandHeader: View {
     @EnvironmentObject private var app: AppModel
     var body: some View {
         HStack(spacing: 10) {
-            Image(Artwork.logo.rawValue).resizable().scaledToFit().frame(width: 44, height: 44).accessibilityHidden(true)
+            Image(Artwork.logo.rawValue).resizable().scaledToFit().frame(width: 44, height: 44).clipShape(RoundedRectangle(cornerRadius: 12)).accessibilityHidden(true)
             VStack(alignment: .leading, spacing: 3) {
                 Text(app.text(.brand)).font(.title2.bold())
                 Text(app.text(.tagline)).font(.caption).foregroundStyle(DaamTheme.secondary)
@@ -145,7 +139,7 @@ struct DashboardPanel<Content: View>: View {
             .frame(maxWidth: .infinity, alignment: .leading)
             .padding(18)
             .background(.white, in: RoundedRectangle(cornerRadius: 24))
-            .overlay(RoundedRectangle(cornerRadius: 24).stroke(DaamTheme.primary.opacity(0.3), lineWidth: 1.5))
+            .overlay(RoundedRectangle(cornerRadius: 24).stroke(DaamTheme.primary.opacity(0.15), lineWidth: 1))
     }
 }
 

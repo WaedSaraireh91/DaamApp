@@ -28,11 +28,12 @@ struct LocalizedTextField: UIViewRepresentable {
         field.autocorrectionType = keyboard == .emailAddress || secure ? .no : .default
         field.textContentType = secure ? .password : keyboard == .emailAddress ? .emailAddress : nil
         let rtl = direction == .rightToLeft
-        field.semanticContentAttribute = rtl ? .forceRightToLeft : .forceLeftToRight
+        let leftToRightInput = keyboard == .emailAddress || keyboard == .phonePad
+        field.semanticContentAttribute = leftToRightInput || !rtl ? .forceLeftToRight : .forceRightToLeft
         field.textAlignment = rtl ? .right : .left
         let paragraph = NSMutableParagraphStyle()
         paragraph.alignment = rtl ? .right : .left
-        paragraph.baseWritingDirection = rtl ? .rightToLeft : .leftToRight
+        paragraph.baseWritingDirection = rtl && !leftToRightInput ? .rightToLeft : .leftToRight
         field.attributedPlaceholder = NSAttributedString(string: placeholder, attributes: [
             .foregroundColor: UIColor.secondaryLabel,
             .paragraphStyle: paragraph,
@@ -40,7 +41,7 @@ struct LocalizedTextField: UIViewRepresentable {
         ])
         field.accessibilityLabel = placeholder
         if let range = field.textRange(from: field.beginningOfDocument, to: field.endOfDocument) {
-            field.setBaseWritingDirection(rtl && keyboard != .emailAddress ? .rightToLeft : .leftToRight, for: range)
+            field.setBaseWritingDirection(rtl && !leftToRightInput ? .rightToLeft : .leftToRight, for: range)
         }
     }
     final class Coordinator: NSObject {
